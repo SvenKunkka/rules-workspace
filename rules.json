@@ -1,0 +1,961 @@
+{
+  "version": "0.4.1",
+  "generated_at": "2026-07-21T07:24:08+00:00",
+  "semantic_extraction_policy": {
+    "ai_semantic_context": true,
+    "rules_constrain_only": [
+      "canonical fields",
+      "standard values",
+      "units",
+      "forbidden inferences"
+    ],
+    "uncovered_content": "AI may extract it with raw_value and source.",
+    "agreement_requirement": "Two independent semantic judgments must agree before emitting a determinate field.",
+    "disagreement": "Preserve raw_value with status unresolved.",
+    "human_confirmation_required": false,
+    "publication": "Final product content remains subject to software review."
+  },
+  "active": {
+    "field_rules": [
+      {
+        "rule_id": "field.product_model",
+        "canonical_field": "product.model",
+        "display_name_zh": "产品型号",
+        "display_name_en": "Product model",
+        "aliases": [
+          "型号"
+        ],
+        "data_type": "string",
+        "standard_unit": null,
+        "semantic_conditions": "commercial product model in product context",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 41,
+        "source_document_count": 39,
+        "source_product_count": 36,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "ev:src_0f186a15642a58bb:US配置规格表:B5:C5",
+          "ev:src_0f186a15642a58bb:JP配置规格表 :B5:C5",
+          "ev:src_7390d290d7e78b54:产品规格配置表 :B6:C6",
+          "ev:src_4ad98a31a006514a:Orca三模1K :C7:D7",
+          "ev:src_325fc855a2a87f0c:M P款规格表:B5:C5",
+          "ev:src_be37f16c150888fc:配置规格表:C5:D5",
+          "ev:src_ffa9fe343aef0bca:配置规格表:C5:D5",
+          "ev:src_3c2f40861db34a30:产品规格配置表 :B6:C6",
+          "ev:src_87a95389fc7fcc89:旋钮控制台:C4:D4",
+          "ev:src_4ca206a4668be82f:配置规格表:B3:C3",
+          "ev:src_82ac0c862c63456a:配置规格表:B3:C3",
+          "ev:src_fc0245de82a9f9e6:旋钮控制台:C4:D4",
+          "ev:src_904d4e2729b9ac81:J3 SE产品规格配置表:B7:C7",
+          "ev:src_62a0a42d2a081eb6:M P款规格表:B5:C5",
+          "ev:src_a70fc54493f11d79:M P款规格表:B5:C5",
+          "ev:src_19f2110f123ba398:M P V 款规格表:B5:C5",
+          "ev:src_5e1a188700f949e1:Conductor三模1K :C7:D7",
+          "ev:src_a65d1c55c0628066:配置规格表:B5:C5",
+          "ev:src_780470f70bfbe86d:K3 8K Hybrid配置清单:B4:C4",
+          "ev:src_478f2dd8e0120ff3:1:B5:C5",
+          "ev:src_f7ee91caf1296885:1:B4:C4",
+          "ev:src_cf5d10a791feb16a:1:B4:C4",
+          "ev:src_8ddf72f7f99d84cd:Z0 8K:C5:D5",
+          "ev:src_ffb977a60a0fe212:Z0 Hybrid 8K:C5:D5"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "型号",
+            "raw_value": "Keychron C3 HE",
+            "evidence_id": "ev:src_0f186a15642a58bb:US配置规格表:B5:C5"
+          },
+          {
+            "raw_label": "型号",
+            "raw_value": "Keychron C3 HE 8K",
+            "evidence_id": "ev:src_0f186a15642a58bb:JP配置规格表 :B5:C5"
+          },
+          {
+            "raw_label": "型号",
+            "raw_value": "Keychron J9",
+            "evidence_id": "ev:src_7390d290d7e78b54:产品规格配置表 :B6:C6"
+          },
+          {
+            "raw_label": "型号",
+            "raw_value": "Orca echo-L",
+            "evidence_id": "ev:src_4ad98a31a006514a:Orca三模1K :C7:D7"
+          },
+          {
+            "raw_label": "型号",
+            "raw_value": "Q11 Ultra 8K L/Q11 Ultra 8K R",
+            "evidence_id": "ev:src_325fc855a2a87f0c:M P款规格表:B5:C5"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 30,
+          "held_out_document_count": 9,
+          "passed": true
+        }
+      },
+      {
+        "rule_id": "field.keyboard_switch",
+        "canonical_field": "keyboard.switch.model",
+        "display_name_zh": "键盘轴体",
+        "display_name_en": "Keyboard switch",
+        "aliases": [
+          "开关轴体"
+        ],
+        "data_type": "string",
+        "standard_unit": null,
+        "semantic_conditions": "keyboard domain only; never applies to mouse switches",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 42,
+        "source_document_count": 40,
+        "source_product_count": 37,
+        "applicable_domains": [
+          "keyboard"
+        ],
+        "evidence_ids": [
+          "ev:src_0f186a15642a58bb:US配置规格表:B11:C11",
+          "ev:src_0f186a15642a58bb:JP配置规格表 :B11:C11",
+          "ev:src_7390d290d7e78b54:产品规格配置表 :B12:C12",
+          "ev:src_325fc855a2a87f0c:M P款规格表:B12:C12",
+          "ev:src_be37f16c150888fc:配置规格表:C13:D13",
+          "ev:src_ffa9fe343aef0bca:配置规格表:C10:D10",
+          "ev:src_3c2f40861db34a30:产品规格配置表 :B12:C12",
+          "ev:src_87a95389fc7fcc89:旋钮控制台:C9:D9",
+          "ev:src_4ca206a4668be82f:配置规格表:B12:C12",
+          "ev:src_82ac0c862c63456a:配置规格表:B12:C12",
+          "ev:src_fc0245de82a9f9e6:旋钮控制台:C9:D9",
+          "ev:src_904d4e2729b9ac81:J3 SE产品规格配置表:B14:C14",
+          "ev:src_62a0a42d2a081eb6:M P款规格表:B12:C12",
+          "ev:src_a70fc54493f11d79:M P款规格表:B12:C12",
+          "ev:src_19f2110f123ba398:M P V 款规格表:B12:C12",
+          "ev:src_a65d1c55c0628066:配置规格表:B11:C11",
+          "ev:src_780470f70bfbe86d:K3 8K Hybrid配置清单:B17:C17",
+          "ev:src_4864db0a4db1070c:K8 Ultra 8K:B16:C16",
+          "ev:src_f7ee91caf1296885:1:B12:C12",
+          "ev:src_cf5d10a791feb16a:1:B12:C12",
+          "ev:src_8ddf72f7f99d84cd:Z0 8K:C10:D10",
+          "ev:src_ffb977a60a0fe212:Z0 Hybrid 8K:C10:D10",
+          "ev:src_0a9576872f4afe27:K5 ultra 8K定制配置清单:B8:C8",
+          "ev:src_1aa7622a89b35505:配置规格表:B11:C11"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "开关轴体",
+            "raw_value": "高特青柠磁轴",
+            "evidence_id": "ev:src_0f186a15642a58bb:US配置规格表:B11:C11"
+          },
+          {
+            "raw_label": "开关轴体",
+            "raw_value": "高特青柠磁轴",
+            "evidence_id": "ev:src_0f186a15642a58bb:JP配置规格表 :B11:C11"
+          },
+          {
+            "raw_label": "开关轴体",
+            "raw_value": "环诺POM矮轴",
+            "evidence_id": "ev:src_7390d290d7e78b54:产品规格配置表 :B12:C12"
+          },
+          {
+            "raw_label": "开关轴体",
+            "raw_value": "佳达隆木星轴（3pin）",
+            "evidence_id": "ev:src_325fc855a2a87f0c:M P款规格表:B12:C12"
+          },
+          {
+            "raw_label": "开关轴体",
+            "raw_value": "Keychron 快速青柠轴",
+            "evidence_id": "ev:src_be37f16c150888fc:配置规格表:C13:D13"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 29,
+          "held_out_document_count": 11,
+          "passed": true
+        }
+      },
+      {
+        "rule_id": "field.battery_capacity",
+        "canonical_field": "power.battery.capacity_mah",
+        "display_name_zh": "电池容量",
+        "display_name_en": "Battery capacity",
+        "aliases": [
+          "电池",
+          "电池容量"
+        ],
+        "data_type": "integer",
+        "standard_unit": "mAh",
+        "semantic_conditions": "direct value has mAh/MAH capacity unit; model/type/connector fragments remain raw metadata",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 31,
+        "source_document_count": 30,
+        "source_product_count": 29,
+        "applicable_domains": [
+          "electronic_component",
+          "keyboard",
+          "mouse"
+        ],
+        "evidence_ids": [
+          "ev:src_7390d290d7e78b54:产品规格配置表 :B25:C25",
+          "ev:src_4ad98a31a006514a:Orca三模1K :C8:D8",
+          "ev:src_3c2f40861db34a30:产品规格配置表 :B24:C24",
+          "ev:src_904d4e2729b9ac81:J3 SE产品规格配置表:B30:C30",
+          "ev:src_5e1a188700f949e1:Conductor三模1K :C8:D8",
+          "ev:src_5e428c9881039eda:Keychron G19 HE:B25:C25",
+          "ev:src_bd085249949ccba2:M3 HE-3395-鼠标功能配置清单:B28:C28",
+          "ev:src_332182a01ea32d41:Keychron G4 HE合金-功能规格:B26:C26",
+          "ev:src_c9db3eb661d10a19:Keychron G4 V1合金-功能规格:B26:C26",
+          "ev:src_8d0070fc05aad606:Keychron G3HE:B24:C24",
+          "ev:src_24f4b42f0584a6d1:Keychron G6:B24:C24",
+          "ev:src_283e5748c3c50a73:鼠标功能配置清单:B33:C33",
+          "ev:src_61c38c8fc71b5f97:Keychron G10 HE:B24:C24",
+          "ev:src_ac1f24220a2a4e41:M3 HE 8K-3390-鼠标功能配置清单:B27:C27",
+          "ev:src_61c38c8fc71b5f97:Keychron G10 HE:B24:C24",
+          "ev:src_9fe5fd85a6e879e2:M3 HE-3311-鼠标功能配置清单:B27:C27",
+          "ev:src_2c018d4dcec9899f:Keychron G6:B24:C24",
+          "ev:src_70a18f7ae6ff0c2c:V3 max-旋钮款配置表:B25:C25",
+          "ev:src_4864db0a4db1070c:K8 Ultra 8K:B21:C21",
+          "ev:src_0a9576872f4afe27:K5 ultra 8K定制配置清单:B19:C19",
+          "ev:src_7da978c63125a623:K1 ultra 8K定制配置清单:B19:C19",
+          "ev:src_6d5ba72281065c88:K2 Ultra 8K:B21:C21",
+          "ev:src_a6d5736a221a5b37:K3 ultra 8K定制配置清单:B19:C19",
+          "ev:src_8eed1b1000df07e9:Pixel 70黑色金属款定制配置清单:B25:C25"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "电池",
+            "raw_value": "2000mAh",
+            "evidence_id": "ev:src_7390d290d7e78b54:产品规格配置表 :B25:C25"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "205755--650mAh*1",
+            "evidence_id": "ev:src_4ad98a31a006514a:Orca三模1K :C8:D8"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "2000mAh",
+            "evidence_id": "ev:src_3c2f40861db34a30:产品规格配置表 :B24:C24"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "606090-4000mah",
+            "evidence_id": "ev:src_904d4e2729b9ac81:J3 SE产品规格配置表:B30:C30"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "205755--650mAh*1",
+            "evidence_id": "ev:src_5e1a188700f949e1:Conductor三模1K :C8:D8"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 27,
+          "held_out_document_count": 3,
+          "passed": true
+        },
+        "preserve_related_raw_components": true
+      },
+      {
+        "rule_id": "field.physical_interface",
+        "canonical_field": "connectivity.physical_port",
+        "display_name_zh": "物理接口",
+        "display_name_en": "Physical port",
+        "aliases": [
+          "接口",
+          "连接接口"
+        ],
+        "data_type": "enum",
+        "standard_unit": null,
+        "semantic_conditions": "direct value explicitly names USB, USB-C, or Type-C physical connector",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 38,
+        "source_document_count": 35,
+        "source_product_count": 30,
+        "applicable_domains": [
+          "electronic_component",
+          "keyboard",
+          "mouse"
+        ],
+        "evidence_ids": [
+          "ev:src_475955eb97e6731a:功能规格（RGB）:B10:C10",
+          "ev:src_b434e329e7219396:功能规格（RGB）:B10:C10",
+          "ev:src_1cf4bcd90a04647d:功能规格:B10:C10",
+          "ev:src_56b8192816542724:G5功能规格书:B10:C10",
+          "ev:src_f301242a1600b512:功能规格（汇总版本）:B12:C12",
+          "ev:src_5952fc10005acf3a:1:B10:C10",
+          "ev:src_04020ecd5fa27498:电子功能规格书:B10:C10",
+          "ev:src_76a96af4bc1753a7:电子功能规格书:B10:C10",
+          "ev:src_e524840b09f35fc5:L功能:B13:C13",
+          "ev:src_e524840b09f35fc5:R功能:B13:C13",
+          "ev:src_0f5b232089da4eca:电子功能规格表:B10:C10",
+          "ev:src_7c94e4daf53b397b:功能规格:B10:C10",
+          "ev:src_490515eacbcb01b2:功能规格:B10:C10",
+          "ev:src_99882bbb94928a50:功能规格:B10:C10",
+          "ev:src_deb4452fba0ac82c:电子功能规格书:B10:C10",
+          "ev:src_4aa73d7c563a0b4b:L功能:B13:C13",
+          "ev:src_4aa73d7c563a0b4b:R功能:B13:C13",
+          "ev:src_6d03acbe614cf8aa:功能规格（汇总版本）:B12:C12",
+          "ev:src_74692816963dbd39:电子功能规格书:B10:C10",
+          "ev:src_a8e00d0b05ff2687:功能规格:B10:C10",
+          "ev:src_66aa1c8f6cbefb99:功能规格（RGB）:B10:C10",
+          "ev:src_88f66bc3270707f3:功能规格（RGB）:B10:C10",
+          "ev:src_e56296ddfaa61586:功能规格（RGB）:B10:C10",
+          "ev:src_23d1997ef4374107:功能规格（RGB）:B10:C10"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "接口",
+            "raw_value": "1个USB Type-C接口",
+            "evidence_id": "ev:src_475955eb97e6731a:功能规格（RGB）:B10:C10"
+          },
+          {
+            "raw_label": "接口",
+            "raw_value": "1个USB Type-C接口",
+            "evidence_id": "ev:src_b434e329e7219396:功能规格（RGB）:B10:C10"
+          },
+          {
+            "raw_label": "接口",
+            "raw_value": "1个USB Type-C接口",
+            "evidence_id": "ev:src_1cf4bcd90a04647d:功能规格:B10:C10"
+          },
+          {
+            "raw_label": "接口",
+            "raw_value": "1个USB Type-C接口",
+            "evidence_id": "ev:src_56b8192816542724:G5功能规格书:B10:C10"
+          },
+          {
+            "raw_label": "接口",
+            "raw_value": "1个USB Type-C接口",
+            "evidence_id": "ev:src_f301242a1600b512:功能规格（汇总版本）:B12:C12"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 29,
+          "held_out_document_count": 6,
+          "passed": true
+        }
+      }
+    ],
+    "value_rules": [
+      {
+        "rule_id": "value.led_north_facing",
+        "canonical_field": "lighting.led_orientation",
+        "display_name_zh": "北向灯",
+        "display_name_en": "北向灯",
+        "aliases": [],
+        "data_type": "enum",
+        "standard_unit": null,
+        "semantic_conditions": "keyboard lighting context; (?i)(北向灯|north[- ]?facing)",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 11,
+        "source_document_count": 10,
+        "source_product_count": 8,
+        "applicable_domains": [
+          "keyboard"
+        ],
+        "evidence_ids": [
+          "ev:src_4ad98a31a006514a:Orca三模1K :C10:D10",
+          "ev:src_f301242a1600b512:功能规格（汇总版本）:B14:C14",
+          "ev:src_deb4452fba0ac82c:电子功能规格书:B13:C13",
+          "ev:src_4aa73d7c563a0b4b:L功能:B15:C15",
+          "ev:src_4aa73d7c563a0b4b:R功能:B15:C15",
+          "ev:src_6d03acbe614cf8aa:功能规格（汇总版本）:B14:C14",
+          "ev:src_66aa1c8f6cbefb99:功能规格（RGB）:B12:C12",
+          "ev:src_f3015201359684bf:功能规格（RGB）:B12:C12",
+          "ev:src_f1867bca82dbefbf:功能规格（RGB）:B12:C12",
+          "ev:src_384f8d4d7b621a89:电子功能规格书:B13:C13",
+          "ev:src_8d59c91f89f66008:K3 Ultra 8K功能规格:B14:C14"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "LED",
+            "raw_value": "北向灯，RGB (上灯位 RGB)",
+            "evidence_id": "ev:src_4ad98a31a006514a:Orca三模1K :C10:D10"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "北向灯，rgb，环诺POM轴",
+            "evidence_id": "ev:src_f301242a1600b512:功能规格（汇总版本）:B14:C14"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "磁轴，北向灯 RGB",
+            "evidence_id": "ev:src_deb4452fba0ac82c:电子功能规格书:B13:C13"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "高特矮轴，矮轴磁轴，APEX轴 北向灯",
+            "evidence_id": "ev:src_4aa73d7c563a0b4b:L功能:B15:C15"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "高特矮轴，矮轴磁轴，APEX轴 北向灯",
+            "evidence_id": "ev:src_4aa73d7c563a0b4b:R功能:B15:C15"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 9,
+          "held_out_document_count": 1,
+          "passed": true
+        },
+        "pattern": "(?i)(北向灯|north[- ]?facing)",
+        "normalized_value": "north_facing"
+      }
+    ],
+    "unit_rules": [
+      {
+        "rule_id": "unit.mhz_to_hz",
+        "source_unit": "MHz",
+        "target_unit": "Hz",
+        "multiplier": 1000000,
+        "semantic_scope": "frequency only",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:unit.mhz_to_hz"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "MHz to Hz deterministic conversion",
+            "evidence_id": "policy:unit.mhz_to_hz"
+          }
+        ],
+        "provenance_type": "deterministic_policy",
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ]
+      },
+      {
+        "rule_id": "unit.khz_to_hz",
+        "source_unit": "kHz",
+        "target_unit": "Hz",
+        "multiplier": 1000,
+        "semantic_scope": "frequency only",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:unit.khz_to_hz"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "kHz to Hz deterministic conversion",
+            "evidence_id": "policy:unit.khz_to_hz"
+          }
+        ],
+        "provenance_type": "deterministic_policy",
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ]
+      },
+      {
+        "rule_id": "unit.cm_to_mm",
+        "source_unit": "cm",
+        "target_unit": "mm",
+        "multiplier": 10,
+        "semantic_scope": "length only",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 2,
+        "source_document_count": 2,
+        "source_product_count": 2,
+        "applicable_domains": [
+          "cable"
+        ],
+        "evidence_ids": [
+          "ev:src_8eed1b1000df07e9:Pixel 70黑色金属款定制配置清单:B27:C27",
+          "ev:src_f1baf36a1fa485ae:Pixel 70黑色金属款定制配置清单:B27:C27"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "线材",
+            "raw_value": "1、USB-A 8K接收器，白色，公模，镭雕Keychron； 2、直头，A TO C 白色编织线，线长1.5m，8K，带磁环； 3、Type-C 线材 白色，线长21cm，两头弯头C口，仿硅胶材质，1K； 4、接收器延长器，C母 对 A母，白色。",
+            "evidence_id": "ev:src_8eed1b1000df07e9:Pixel 70黑色金属款定制配置清单:B27:C27"
+          },
+          {
+            "raw_label": "线材",
+            "raw_value": "1、USB-A 8K接收器，白色，公模，镭雕Keychron； 2、直头，A TO C 白色编织线，线长1.5m，8K，带磁环； 3、Type-C 线材 白色，线长21cm，两头弯头C口，仿硅胶材质，1K； 4、接收器延长器，C母 对 A母，白色。",
+            "evidence_id": "ev:src_f1baf36a1fa485ae:Pixel 70黑色金属款定制配置清单:B27:C27"
+          }
+        ],
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ]
+      },
+      {
+        "rule_id": "unit.kg_to_g",
+        "source_unit": "kg",
+        "target_unit": "g",
+        "multiplier": 1000,
+        "semantic_scope": "weight only",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:unit.kg_to_g"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "kg to g deterministic conversion",
+            "evidence_id": "policy:unit.kg_to_g"
+          }
+        ],
+        "provenance_type": "deterministic_policy",
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ]
+      },
+      {
+        "rule_id": "unit.mah_case",
+        "source_unit": "mAH|MAH",
+        "target_unit": "mAh",
+        "multiplier": 1,
+        "semantic_scope": "battery capacity only",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 69,
+        "source_document_count": 48,
+        "source_product_count": 40,
+        "applicable_domains": [
+          "electronic_component",
+          "keyboard",
+          "mouse"
+        ],
+        "evidence_ids": [
+          "ev:src_7390d290d7e78b54:产品规格配置表 :B25:C25",
+          "ev:src_4ad98a31a006514a:Orca三模1K :C8:D8",
+          "ev:src_3c2f40861db34a30:产品规格配置表 :B24:C24",
+          "ev:src_330b69da9865eb77:轨迹球鼠标:C13:D13",
+          "ev:src_98477c1a201e795d:轨迹球鼠标:C13:D13",
+          "ev:src_fc0245de82a9f9e6:旋钮控制台:C6:D6",
+          "ev:src_904d4e2729b9ac81:J3 SE产品规格配置表:B30:C30",
+          "ev:src_19f2110f123ba398:M P V 款规格表:B6:C6",
+          "ev:src_5e1a188700f949e1:Conductor三模1K :C8:D8",
+          "ev:src_427dafc78ba1b067:Nape Pro:C6:D6",
+          "ev:src_37eceb497f7874ff:G6 HE配置表:C8:D8",
+          "ev:src_5e428c9881039eda:Keychron G19 HE:B25:C25",
+          "ev:src_5e428c9881039eda:Keychron G19 HE:B27:C27",
+          "ev:src_bd085249949ccba2:M3 HE-3395-鼠标功能配置清单:B28:C28",
+          "ev:src_bd085249949ccba2:M3 HE-3395-鼠标功能配置清单:B29:C29",
+          "ev:src_bd085249949ccba2:M3 HE-3395-鼠标功能配置清单:B30:C30",
+          "ev:src_332182a01ea32d41:Keychron G4 HE合金-功能规格:B26:C26",
+          "ev:src_332182a01ea32d41:Keychron G4 HE合金-功能规格:B27:C27",
+          "ev:src_332182a01ea32d41:Keychron G4 HE合金-功能规格:B28:C28",
+          "ev:src_81613f64ae8eb290:鼠标功能配置清单:B30:C30",
+          "ev:src_c9db3eb661d10a19:Keychron G4 V1合金-功能规格:B26:C26",
+          "ev:src_c9db3eb661d10a19:Keychron G4 V1合金-功能规格:B27:C27",
+          "ev:src_c9db3eb661d10a19:Keychron G4 V1合金-功能规格:B28:C28",
+          "ev:src_8d0070fc05aad606:Keychron G3HE:B24:C24"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "电池",
+            "raw_value": "2000mAh",
+            "evidence_id": "ev:src_7390d290d7e78b54:产品规格配置表 :B25:C25"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "205755--650mAh*1",
+            "evidence_id": "ev:src_4ad98a31a006514a:Orca三模1K :C8:D8"
+          },
+          {
+            "raw_label": "电池",
+            "raw_value": "2000mAh",
+            "evidence_id": "ev:src_3c2f40861db34a30:产品规格配置表 :B24:C24"
+          },
+          {
+            "raw_label": "电池规格",
+            "raw_value": "恒讯350mAh-4.4V",
+            "evidence_id": "ev:src_330b69da9865eb77:轨迹球鼠标:C13:D13"
+          },
+          {
+            "raw_label": "电池规格",
+            "raw_value": "恒讯350mAh-4.4V",
+            "evidence_id": "ev:src_98477c1a201e795d:轨迹球鼠标:C13:D13"
+          }
+        ],
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ]
+      },
+      {
+        "rule_id": "unit.ma_vs_mah",
+        "source_unit": "mA",
+        "target_unit": "mA",
+        "multiplier": 1,
+        "semantic_scope": "electric current only; reject mAh and battery-context bare mA",
+        "direct_unit_only": true,
+        "status": "active",
+        "confidence": 0.99,
+        "evidence_count": 71,
+        "source_document_count": 57,
+        "source_product_count": 49,
+        "applicable_domains": [
+          "electronic_component",
+          "keyboard",
+          "mouse"
+        ],
+        "evidence_ids": [
+          "ev:src_fd3e9d3d33b54bea:功能规格清单:B25:C25",
+          "ev:src_c504a1b5becfcd96:C3 HE US功能规格清单:B22:C22",
+          "ev:src_c504a1b5becfcd96:C3 HE 8K JP功能规格清单 :B23:C23",
+          "ev:src_8a172e1a77304856:C3 HE US功能规格清单:B21:C21",
+          "ev:src_5f39c184276858f5:功能规格清单:B23:C23",
+          "ev:src_3ba6946218486eaf:功能规格清单:B23:C23",
+          "ev:src_475955eb97e6731a:功能规格（RGB）:C67:E67",
+          "ev:src_58131082ffc95719:电子功能规格表:C59:E59",
+          "ev:src_b434e329e7219396:功能规格（RGB）:C67:E67",
+          "ev:src_1cf4bcd90a04647d:功能规格:C65:E65",
+          "ev:src_56b8192816542724:G5功能规格书:C26:E26",
+          "ev:src_f301242a1600b512:功能规格（汇总版本）:C70:E70",
+          "ev:src_d893296fe8dc8966:电子功能规格表:C60:E60",
+          "ev:src_9f0525d87909a1da:A:C52:E52",
+          "ev:src_9f0525d87909a1da:A:C53:E53",
+          "ev:src_9f0525d87909a1da:B:C48:E48",
+          "ev:src_9f0525d87909a1da:B:C49:E49",
+          "ev:src_5952fc10005acf3a:1:C67:E67",
+          "ev:src_5e00c3dc1e3e70ea:电子功能规格表:C59:E59",
+          "ev:src_5e428c9881039eda:Keychron G19 HE:B26:C26",
+          "ev:src_04020ecd5fa27498:电子功能规格书:C65:E65",
+          "ev:src_76a96af4bc1753a7:电子功能规格书:C65:E65",
+          "ev:src_e524840b09f35fc5:L功能:C40:E40",
+          "ev:src_e524840b09f35fc5:R功能:C34:E34"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "最大电流",
+            "raw_value": "200mA",
+            "evidence_id": "ev:src_fd3e9d3d33b54bea:功能规格清单:B25:C25"
+          },
+          {
+            "raw_label": "最大电流",
+            "raw_value": "600mA",
+            "evidence_id": "ev:src_c504a1b5becfcd96:C3 HE US功能规格清单:B22:C22"
+          },
+          {
+            "raw_label": "最大电流",
+            "raw_value": "200mA",
+            "evidence_id": "ev:src_c504a1b5becfcd96:C3 HE 8K JP功能规格清单 :B23:C23"
+          },
+          {
+            "raw_label": "最大电流",
+            "raw_value": "600mA",
+            "evidence_id": "ev:src_8a172e1a77304856:C3 HE US功能规格清单:B21:C21"
+          },
+          {
+            "raw_label": "最大电流",
+            "raw_value": "200mA",
+            "evidence_id": "ev:src_5f39c184276858f5:功能规格清单:B23:C23"
+          }
+        ],
+        "negative_examples": [
+          "Do not infer units from unrelated units elsewhere in the sentence."
+        ],
+        "allowed_field_labels": [
+          "最大电流",
+          "充电电流",
+          "工作电流",
+          "待机电流",
+          "睡眠电流"
+        ],
+        "battery_context_guard": {
+          "field_labels": [
+            "电池",
+            "电池容量",
+            "电池规格"
+          ],
+          "action": "preserve raw_value; suspected_unit_typo=true; suggested_unit=mAh; status=unresolved"
+        },
+        "automatic_unit_interchange": false
+      }
+    ],
+    "composite_rules": [
+      {
+        "rule_id": "composite.switch_led_orientation",
+        "canonical_field": "keyboard.switch_and_led_orientation",
+        "display_name_zh": "轴体与灯位朝向",
+        "display_name_en": "Switch and LED orientation",
+        "aliases": [
+          "轴体 & 灯位朝向"
+        ],
+        "data_type": "object",
+        "standard_unit": null,
+        "semantic_conditions": "keyboard domain and this specific composite label; execute each capture independently",
+        "status": "active",
+        "confidence": 0.96,
+        "normalization": "Preserve raw_value and source; standardize only when all semantic conditions match.",
+        "evidence_count": 34,
+        "source_document_count": 31,
+        "source_product_count": 26,
+        "applicable_domains": [
+          "keyboard"
+        ],
+        "evidence_ids": [
+          "ev:src_475955eb97e6731a:功能规格（RGB）:B13:C13",
+          "ev:src_b434e329e7219396:功能规格（RGB）:B12:C12",
+          "ev:src_1cf4bcd90a04647d:功能规格:B12:C12",
+          "ev:src_f301242a1600b512:功能规格（汇总版本）:B14:C14",
+          "ev:src_04020ecd5fa27498:电子功能规格书:B13:C13",
+          "ev:src_76a96af4bc1753a7:电子功能规格书:B13:C13",
+          "ev:src_e524840b09f35fc5:L功能:B15:C15",
+          "ev:src_e524840b09f35fc5:R功能:B15:C15",
+          "ev:src_0f5b232089da4eca:电子功能规格表:B12:C12",
+          "ev:src_b8a667db1278e04a:Z0 Hybrid 8K电子功能规格书:B12:C12",
+          "ev:src_7c94e4daf53b397b:功能规格:B12:C12",
+          "ev:src_490515eacbcb01b2:功能规格:B12:C12",
+          "ev:src_99882bbb94928a50:功能规格:B12:C12",
+          "ev:src_deb4452fba0ac82c:电子功能规格书:B13:C13",
+          "ev:src_4aa73d7c563a0b4b:L功能:B15:C15",
+          "ev:src_4aa73d7c563a0b4b:R功能:B15:C15",
+          "ev:src_6d03acbe614cf8aa:功能规格（汇总版本）:B14:C14",
+          "ev:src_74692816963dbd39:电子功能规格书:B13:C13",
+          "ev:src_a8e00d0b05ff2687:功能规格:B12:C12",
+          "ev:src_66aa1c8f6cbefb99:功能规格（RGB）:B12:C12",
+          "ev:src_23d1997ef4374107:功能规格（RGB）:B12:C12",
+          "ev:src_f3015201359684bf:功能规格（RGB）:B12:C12",
+          "ev:src_f1867bca82dbefbf:功能规格（RGB）:B12:C12",
+          "ev:src_99c37a1dcaea8d64:Z0 8K电子功能规格书:B12:C12"
+        ],
+        "positive_examples": [
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "磁轴，南向灯",
+            "evidence_id": "ev:src_475955eb97e6731a:功能规格（RGB）:B13:C13"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "高特磁轴",
+            "evidence_id": "ev:src_b434e329e7219396:功能规格（RGB）:B12:C12"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "乐沪 Super 轴",
+            "evidence_id": "ev:src_1cf4bcd90a04647d:功能规格:B12:C12"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "北向灯，rgb，环诺POM轴",
+            "evidence_id": "ev:src_f301242a1600b512:功能规格（汇总版本）:B14:C14"
+          },
+          {
+            "raw_label": "轴体 & 灯位朝向",
+            "raw_value": "TwinLight磁轴，上下双灯位",
+            "evidence_id": "ev:src_04020ecd5fa27498:电子功能规格书:B13:C13"
+          }
+        ],
+        "held_out_validation_result": {
+          "train_document_count": 25,
+          "held_out_document_count": 6,
+          "passed": true
+        },
+        "trigger_conditions": {
+          "domain": "keyboard",
+          "raw_label": "轴体 & 灯位朝向",
+          "requires_any_capture": true
+        },
+        "capture_patterns": {
+          "keyboard.switch.model": "(?i)(?P<switch>(?:[A-Za-z0-9\\- ]+|[\\u4e00-\\u9fff]+)[^，,;；]*?轴)",
+          "lighting.led_orientation": "(?i)(?P<led_orientation>南向灯|北向灯|south[- ]?facing|north[- ]?facing)"
+        },
+        "nullable_output_fields": [
+          "keyboard.switch.model",
+          "lighting.led_orientation"
+        ],
+        "output_only_if_group_captured": true,
+        "negative_examples": [
+          "6028-RGB-3QT-A01",
+          "仅写 RGB 或单独灯规的行"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "rule_id": "constraint.no_product_merge_from_shared_component",
+        "status": "active",
+        "confidence": 0.99,
+        "rule": "Shared MCU, sensor, switch, or module never proves product identity.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:constraint.no_product_merge_from_shared_component"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Identity safeguard required by the current rule policy.",
+            "evidence_id": "policy:constraint.no_product_merge_from_shared_component"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      },
+      {
+        "rule_id": "constraint.no_inference",
+        "status": "active",
+        "confidence": 0.99,
+        "rule": "Missing composite capture stays null; do not invent an output field.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:constraint.no_inference"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Runtime semantic extraction policy.",
+            "evidence_id": "policy:constraint.no_inference"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      },
+      {
+        "rule_id": "constraint.ma_mah_distinct",
+        "status": "active",
+        "confidence": 0.99,
+        "rule": "mA is current and mAh is capacity; never interchange them.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:constraint.ma_mah_distinct"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Dimension safety policy.",
+            "evidence_id": "policy:constraint.ma_mah_distinct"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      }
+    ],
+    "product_identity_rules": [
+      {
+        "rule_id": "identity.exact_duplicate",
+        "relation": "exact_duplicate",
+        "rule": "Same file hash only deduplicates conversion.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:identity.exact_duplicate"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Product identity rule.",
+            "evidence_id": "policy:identity.exact_duplicate"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      },
+      {
+        "rule_id": "identity.commercial_model_boundary",
+        "relation": "separate_product",
+        "rule": "Different commercial model stays separate.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:identity.commercial_model_boundary"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Product identity rule.",
+            "evidence_id": "policy:identity.commercial_model_boundary"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      },
+      {
+        "rule_id": "identity.variant_boundary",
+        "relation": "related_variant",
+        "rule": "Connection mode, housing material, layout and core structure preserve variants.",
+        "evidence_count": 1,
+        "source_document_count": 0,
+        "source_product_count": 0,
+        "applicable_domains": [
+          "all"
+        ],
+        "evidence_ids": [
+          "policy:identity.variant_boundary"
+        ],
+        "positive_examples": [
+          {
+            "raw_value": "Product identity rule.",
+            "evidence_id": "policy:identity.variant_boundary"
+          }
+        ],
+        "provenance_type": "deterministic_policy"
+      }
+    ]
+  },
+  "statistics": {
+    "active_rules": 18,
+    "candidate_rules": 399,
+    "conflicts": 2,
+    "unresolved": 54,
+    "noise_filtered": 189,
+    "suspected_unit_typos": 7,
+    "field_mapping_coverage": 0.0169,
+    "value_mapping_coverage": 0.0019,
+    "unit_rules": 6,
+    "regression_pass_rate": 1.0,
+    "downgraded_rules": [
+      "field.mouse_feet",
+      "value.led_south_facing"
+    ],
+    "cross_domain_pollution_rules": 0,
+    "detected_cross_domain_pollution_rules": 1,
+    "incorrect_product_merges": 0,
+    "domain_distribution": {
+      "accessory": 122,
+      "cable": 66,
+      "electronic_component": 251,
+      "enclosure": 86,
+      "keyboard": 3643,
+      "mouse": 1466,
+      "packaging": 35
+    }
+  }
+}
